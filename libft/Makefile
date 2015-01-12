@@ -26,6 +26,7 @@ SRC = ft_memset.c \
 	  ft_strcmp.c \
 	  ft_strncmp.c \
 	  ft_strdup.c \
+	  ft_strndup.c \
 	  ft_strcat.c \
 	  ft_strncat.c \
 	  ft_strlcat.c \

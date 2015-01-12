@@ -13,7 +13,7 @@
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFF_SIZE	10000
+# define BUFF_SIZE	80
 # define RET		0
 # define END		1
 # define FD			2

@@ -24,7 +24,9 @@ char	*ft_strstr(const char *s1, const char *s2)
 	while (*temp_s1)
 	{
 		if (*temp_s1 == s2[0] && !ft_strncmp(temp_s1, s2, len_s2))
+		{
 			return (temp_s1);
+		}
 		temp_s1++;
 	}
 	return (NULL);

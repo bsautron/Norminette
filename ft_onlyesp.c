@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_onlyesp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsautron <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: bsautron <bsautron@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/04 10:56:53 by bsautron          #+#    #+#             */
-/*   Updated: 2014/11/08 18:21:04 by bsautron         ###   ########.fr       */
+/*   Created: 2014/12/25 05:18:35 by bsautron          #+#    #+#             */
+/*   Updated: 2014/12/25 05:20:35 by bsautron         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "norminette.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t n)
+int		ft_onlyesp(char *str)
 {
-	size_t		i;
+	int		i;
+	int		ret;
 
+	ret = 1;
 	i = 0;
-	if (dst && src)
+	while (str[i])
 	{
-		while (src[i] && i < n)
+		if (str[i] > ' ')
 		{
-			dst[i] = src[i];
-			i++;
+			ret = 0;
+			break ;
 		}
-		while (i < n)
-		{
-			dst[i] = '\0';
-			i++;
-		}
+		i++;
 	}
-	return (dst);
+	return (ret);
 }

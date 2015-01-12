@@ -13,6 +13,9 @@ t_func	*ft_creat_elem(char *name)
 		new->scope = 0;
 		new->regu_brak = 0;
 		new->nb_line = 0;
+		new->nb_var = 0;
+		new->after_dec = 0;
+		new->after_func = 0;
 		new->next = NULL;
 	}
 	return (new);

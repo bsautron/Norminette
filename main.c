@@ -13,7 +13,7 @@ void	ft_norminette(char **av, char nomain)
 	i = 1;
 	while (av[i])
 	{
-		if (nomain && ft_strequ(av[i], "main.c"))
+		while (nomain && av[i] && ft_strstr(av[i], "main"))
 			i++;
 		if (av[i])
 		{
@@ -30,9 +30,9 @@ void	ft_norminette(char **av, char nomain)
 			close(fd);
 			i++;
 		}
+		else
+			break ;
 	}
-
-
 }
 
 int		main(int ac, char **av)

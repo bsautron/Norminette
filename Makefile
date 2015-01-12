@@ -1,7 +1,11 @@
 CC = gcc
 SRC = main.c \
 	  ft_istype.c \
+	  ft_strlen_scope.c \
+	  ft_gettype_of_func.c \
+	  ft_isdeclar.c \
 	  ft_iscondition.c \
+	  ft_onlyesp.c \
 	  ft_iskeyword.c \
 	  ft_isfunction.c \
 	  ft_getname_of_func.c \

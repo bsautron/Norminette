@@ -1,6 +1,6 @@
 #include "norminette.h"
 
-void	ft_gscope(t_func *lst)
+static void	ft_gscope(t_func *lst)
 {
 	int		scope;
 
@@ -12,7 +12,7 @@ void	ft_gscope(t_func *lst)
 		dprintf(1, "%s\n", "error: bad global scope");
 }
 
-void	ft_nbline(t_func *lst)
+void		ft_nbline(t_func *lst)
 {
 	while (lst)
 	{
@@ -22,13 +22,17 @@ void	ft_nbline(t_func *lst)
 	}
 }
 
-void	ft_nbfunc(t_func *lst)
+void		ft_nbfunc(t_func *lst)
 {
 	int		i;
 
 	i = 0;
 	while (lst)
 	{
+		if (i && lst->after_func != 1)
+			dprintf(1, "error: multi line after function %s\n", lst->name);
+		else if (!i && lst->after_func != 0)
+			dprintf(1, "error: multi line end of file\n");
 		lst = lst->next;
 		i++;
 	}
@@ -36,7 +40,7 @@ void	ft_nbfunc(t_func *lst)
 		dprintf(1, "error: file have %d functions\n", i);
 }
 
-void	ft_analyse(t_func *lst)
+void		ft_analyse(t_func *lst)
 {
 	if (lst)
 	{
