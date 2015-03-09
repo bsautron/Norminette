@@ -1,5 +1,5 @@
 # Nominette
-Minimal Pour fichier .c 
+Minimal Pour fichier .c  
 Bientot pour les .h 
 Bientot pour les .s 
 Bientot pour les .html 
